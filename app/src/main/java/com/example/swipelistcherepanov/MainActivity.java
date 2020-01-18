@@ -32,12 +32,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void prepareContent() {
-        for (int i = 0; i < 5; i++) {
-            Map<String,String> map = new HashMap<>();
-            map.put(HEADER, getString(R.string.header));
-            map.put(TEXT, getString(R.string.text));
-            list.add(map);
-        }
+        Map<String,String> map = new HashMap<>();
+        map.put(HEADER, getString(R.string.text).length()+"");
+        map.put(TEXT, getString(R.string.text));
+        list.add(map);
+
+        Map<String, String> map1 = new HashMap<>();
+        map1.put(HEADER, getString(R.string.text1).length()+"");
+        map1.put(TEXT, getString(R.string.text1));
+        list.add(map1);
+
+        Map<String, String> map2 = new HashMap<>();
+        map2.put(HEADER, getString(R.string.text2).length()+"");
+        map2.put(TEXT, getString(R.string.text2));
+        list.add(map2);
     }
 
     private SimpleAdapter createAdapter (List<Map<String, String>> list) {
